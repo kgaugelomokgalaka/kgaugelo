@@ -1,0 +1,15 @@
+.topnavG{
+    font-size: xx-large;
+    color: #ddd;
+    
+}
+.topnavG a:hover {
+    background-color: #ddd;
+    
+  }
+  
+
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
