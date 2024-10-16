@@ -6,7 +6,6 @@ body, html {
 }
 
 .bg-image {
-  background-image: url("images\portfolioPIC.jpeg");
   filter: blur(8px);
   -webkit-filter: blur(8px);
   height: 100%;
@@ -14,6 +13,10 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+body {
+  background-image: url("images/backgroundPicture.jpeg");
+
+ }
 
 .bg-text {
   
@@ -33,20 +36,28 @@ body, html {
 }
 
 .topnav {
-  overflow:visible;
-  width: 100%;
-  padding-left: 25%;
-  float: right;
-  margin: 2%;
+  overflow: hidden;
+  margin-right: 60px;
+ max-width: 100%;
+
 }
 
 .topnav a {
   float: right;
   color:darkred;
   text-align: right;
-  padding: 14px;
-  font-size: 25px;
+  padding: 30px;
+  font-size: 20px;
 }
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.topnavG{
+  justify-content: right;
+  margin-left: 0%;
+}
+
 
 .topnav a:hover {
   background-color:  white;
