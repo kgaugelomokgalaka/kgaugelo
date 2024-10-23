@@ -15,6 +15,7 @@
   display: block;
   width: 50%;
   height: 630px;
+  margin-top: 50%;
 
 }
 .KG-Text{
@@ -186,7 +187,7 @@
   color: black; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+  float: right; /* Float the buttons side by side */
 }
 
 /* Clear floats (clearfix hack) */
@@ -198,12 +199,12 @@
 
 .btn-group button:not(:last-child) {
   border-right: none; /* Prevent double borders */
+
 }
 
 /* Add a background color on hover */
 .btn-group button:hover {
   background-color:white;
 }
-
 
 
