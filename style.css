@@ -58,29 +58,42 @@
     margin-left: 0%;
 
   }
-.compS{
+.EDU{
   font-size:xx-large;
   color: rgb(255, 14, 243);
   margin:0;
-  text-align: left;
+  text-align: center;
 }
+.compS{
+  font-size: xx-large;
+  color:rgb(255, 14, 243);
+   margin:0;
+   text-align: center; 
+}
+ 
+
 .SoftS{
- font-size: xx-large;
+font-size: xx-large;
  color:rgb(255, 14, 243);
   margin:0;
-  text-align: left; 
+  text-align: center;  
 }
 .PRO{
   font-size: xx-large;
   color: rgb(255, 14, 243);
    margin:0;
-   text-align: left; 
+   text-align: center; 
 }
    .name{
     font-size: x-large;
     color:rgb(255, 14, 243);
     margin:0;
-    text-align: left;
+    text-align: center;
+   }
+   .Paragraph{
+    text-align: center;
+    font-size: larger;
+   
    }
  
   /* Slideshow container */
