@@ -23,4 +23,9 @@
   .btn-group button:hover {
     background-color:white;
   }
-  
+  body{
+    text-decoration-color: blueviolet;
+    background-color: bisque;
+    font-size: larger;
+    
+  }
