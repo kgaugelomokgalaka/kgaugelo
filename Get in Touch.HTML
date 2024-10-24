@@ -3,31 +3,33 @@
 <head>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-
 
 </head>
-
-    
+   
 
 <body  bgcolor="grey">
  
 
 <style>
+  .containerS{
+    max-width: 50%;
+   
+  }
+  .form input{
+    max-width: 100px;
+  }
     img {
       display: block;
       width: 500px;
     }
     </style>
-    
     <div class="topnav">
       <a href="/MOKGALAKA KGAUGELO RESUME .pdf" class="download-btn">VIEW RESUME</a>
-      <a href="ABOUT ME.HTML">ABOUT ME </a>
-      <a href="index.html">PORTFOLIO</a> 
+      <a style="color: grey;" href="Get in Touch.HTML">GET IN TOUCH</a>
       <a href="EDUCATION.HTML">EDUCATION</a>
-      
-      </div>
+      <a href="ABOUT ME.HTML">ABOUT ME </a>
+      <a href="index.html">HOME</a>
+    </div> 
 
      
 
@@ -38,16 +40,24 @@
   height: 630px;" >
 <pre style="color: rgb(0, 0, 0);text-align: left; padding: 2px;font-size: x-large;">
   
-  <h1 class="name">GET IN TOUCH </h1>
-  <a href="https://www.facebook.com/kgaugelo.kgau.3990" class="fa fa-facebook" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/kgaugelo-mokgalaka-149337286/" class="fa fa-linkedin" target="_blank"></a>
-  <a href="https://www.instagram.com/_kgaugelo.kgau.3990/" class="fa fa-instagram" target="_blank"></a>
-  <a href="https://za.pinterest.com/kgaugelohelen/" class="fa fa-pinterest" target="_blank"></a>
-
-
-
   
   
+  <div class="containerS">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
 
 
 
