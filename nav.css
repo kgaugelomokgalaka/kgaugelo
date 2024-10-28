@@ -52,7 +52,7 @@ body {
   color:rgb(255, 14, 243);
   text-align: right;
   padding: 30px;
-  font-size: 30px;
+  font-size: x-large;
 }
 .topnav a.active {
   background-color: #04AA6D;
