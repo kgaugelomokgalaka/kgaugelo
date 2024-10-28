@@ -170,14 +170,83 @@ font-size: xx-large;
   box-sizing: border-box;
 }
 
- 
 
 /* Set a background color */
 body {
   background-color: #474e5d;
   font-family: Helvetica, sans-serif;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #212428;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 80%;
+    display: flex;
+    align-items:end;
+    justify-content: space-around;
+}
+
+.parent-skill {
+    width: 200px;
+    height: auto;
+}
+
+.skill {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    /* background-color: conic-gradient(#f9004d 10%, #212428 0); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress {
+    width: 97%;
+    height: 97%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background: linear-gradient(280deg, #1e2024, #23272b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-number {
+    font-family: 'Poppins', sans-serif;
+    color:rgb(255, 14, 243);
+    font-size: 2rem;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    color:rgb(255, 14, 243) ;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;

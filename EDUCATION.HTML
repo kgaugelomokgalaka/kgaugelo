@@ -38,21 +38,64 @@
 <br>
 <br>
 
-<section id="skills">
-<div class="skills-container">
-  <div class="card1">
-    <h2> COMPUTER SKILLS</h2>
-    <P> Java <br> javaScript<br> html <br> css <br> </P>
+<section>
+
+  <div class="parent-skill">
+      <div class="skill">
+          <div class="progress" data-progress="80">
+              <span class="progress-number">0%</span>
+          </div>
+      </div>
+      <span class="title">HTML</span>
   </div>
-  <div class="card2">
-    <h2> SOFT SKILLS</h2>
-    <P> Good communication <br> Good Team-work <br> self-displined<br> </P>
+
+  <div class="parent-skill">
+      <div class="skill">
+          <div class="progress" data-progress="65">
+              <span class="progress-number">0%</span>
+          </div>
+      </div>
+      <span class="title">Javascript</span>
   </div>
+
+  <div class="parent-skill">
+      <div class="skill">
+          <div class="progress" data-progress="50">
+              <span class="progress-number">0%</span>
+          </div>
+      </div>
+      <span class="title">java</span>
+  </div>
+
+</section>
 
 
 
-  </div>
 </div>
 </div>
-</body></section>
+<script>
+ 'use strict';
+
+function progressBarAndCountNumber () {
+    const progress = document.querySelectorAll('.progress');
+    let count = 0;
+    // You must put the maximum number in the MAX variable.
+    let MAX = 80;
+
+    let run = setInterval(() => {
+        count++;
+        progress.forEach(element => {
+            if (count <= element.dataset.progress) {
+                element.parentElement.style.background = `conic-gradient(#f9004d ${count}%, #212428 0)`;
+                element.firstElementChild.textContent = `${count}%`;
+            };
+            if (count == MAX) {
+                clearInterval(run);
+            };
+        });
+    }, 20);
+}
+
+progressBarAndCountNumber();</script>
+</body>
 </html>
