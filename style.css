@@ -89,7 +89,7 @@
   text-align:center;
    padding-right: 45px;
 }
- 
+
 
 .SoftS{
 font-size: xx-large;
@@ -116,12 +116,12 @@ font-size: xx-large;
    }
    .icons {
     padding: 20px;
-    font-size: 30px;
+    font-size: 40px;
     width: 50px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    color:rgb(255, 14, 243) ;
+    color:black ;
     
   }
 
@@ -185,11 +185,12 @@ body {
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     background-color: #212428;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 section {
@@ -423,4 +424,29 @@ body {
     margin-bottom: 20px;
   }
 }
+.containerS{
+  
 
+}
+.form input{
+  height: 20px;
+  border-radius: 3px;
+  border-bottom: 1px solid white;
+}
+.formLabel{
+  text-decoration-color: palevioletred;  
+  font-size: xx-large;
+}
+input {
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  background: transparent; /* Remove background */
+  font-size: 16px; /* Set font size */
+  color: #333; /* Text color */
+}
+
+/* Optional: Style on focus */
+input:focus {
+  border-bottom: 2px solid #007BFF; /* Add a bottom border on focus */
+  background: rgba(0, 123, 255, 0.1); /* Change background color on focus */
+}
