@@ -9,12 +9,101 @@
   width: 100%;
   justify-content: space-between;
 }
+
+/* .main-image {  
+  background-image: url("images/get-in-touch-5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.main-image::before {
+  background-image: url("images/get-in-touch-5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  filter: blur(8px);
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: rgb(255, 14, 243);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color:coral #45a049;
+}
+
+.containerForm {
+  border-radius: 5px;
+  background-color: rgba(242, 242, 242, 0.75);
+  padding: 20px;
+  width: 80%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
 .container-get{
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between; 
 }
+
+
 
 .container-img {
   display: flex;
@@ -30,8 +119,8 @@
 }
 .KG img{
   display: block;
-  width: 50%;
-  height: 630px;
+  width: 60%;
+  height: 1500px;
   margin-top: 50%;
 
 }
@@ -63,7 +152,7 @@
   
   .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    color: white;
   }
   
   .topnav a.active {
@@ -109,14 +198,18 @@ font-size: xx-large;
     margin:0;
     text-align: center;
    }
+   .p{
+    color: #ddd;
+   }
    .Paragraph{
     text-align: center;
     font-size: larger;
+  
    
    }
    .icons {
     padding: 20px;
-    font-size: 40px;
+    font-size: 60px;
     width: 50px;
     text-align: center;
     text-decoration: none;
@@ -422,12 +515,13 @@ body {
     width: 100%;
     display: block;
     margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding: 80px;
+    font-size: x-large;
   }
 }
-.containerS{
   
-
-}
 .form input{
   height: 20px;
   border-radius: 3px;
@@ -448,5 +542,98 @@ input {
 /* Optional: Style on focus */
 input:focus {
   border-bottom: 2px solid #007BFF; /* Add a bottom border on focus */
-  background: rgba(0, 123, 255, 0.1); /* Change background color on focus */
+  background: rgba(0, 123, 255, 0.1); /* nge background color on focus */
+}
+/* styling for chatbot */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.chatbot-container {
+  width: 300px;
+  border: 2px solid rgb(255, 14, 243);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+}
+
+.chatbot-header {
+  background-color: rgb(255, 14, 243);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  max-width: 80%;
+  padding: 8px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.user-message {
+  background-color: rgb(255, 14, 243);
+  align-self: flex-end;
+  size: 30px;
+}
+
+.bot-message {
+  background-color: #666;
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: rgb(255, 14, 243);
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+.chatbot-icon {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
