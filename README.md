@@ -30,6 +30,7 @@ link to my portfolio (https://kgaugelo.onrender.com)
 
 
 #TECHNOLOGIES
+
 HTML
 CSS
 JavaScript
