@@ -1,4 +1,6 @@
 Explore My Work
+
+
 link to my portfolio (https://kgaugelo.onrender.com)
 
 Description
@@ -20,5 +22,6 @@ Copy repo link.
 Clone using VS Code or Git Bash.
 Save files in their default directory.
 Run index.html in your browser.
+
 Technologies
 HTML CSS JavaScript W3Schools Font awesome Google Fonts Dribble
