@@ -44,15 +44,61 @@ function addMessage(sender, message) {
 }
 
 function getBotResponse(input) {
+    // Convert input to lowercase for case-insensitive matching
+    const userInput = input.toLowerCase();
+    
     // Simple responses
     const responses = {
         "hi": "Hello! How can I assist you today?",
-        "hello": "Hi there!",
-        "how are you": "I'm just a bot, but I'm here to help!",
-        "bye": "Goodbye! Have a great day!"
+        "hello": "Hi there! How can I help you?",
+        "how are you": "I am good thanks how are you ?",
+        "bye": "Goodbye! Have a great day!",
+        // Personal information responses
+        "name ": "kgaugelo Helen",
+        "surname": "Mokgalaka",
+        "your name": "Kgaugelo Helen Mokgalaka",
+        // Professional information responses
+        "qualification": " Bachelor of Information Technology in Business systems.",
+        "qualifications": "bachelor of Information Technology in Business systems.",
+        "interests": "leave it blank for now ",
+        "about me": " I am a 22 years old lady from a small <br>  town called Phalaborwa that is located in Limpopo.<br>  recently graduated from the IIE rosebank collge pretoria campus in Information Technology<br>  in Business System future Business analyst <br> </p>",
+        "strengths": "LEAVE IT BLANK FOR NOW ",
+        "contact": "you can navigate to my get in touch page to get all my contact details ",
+        "resume": "please navigate to the view resume button",
+        "education": "All Saints College-Phalaborwa with<br>Admission to bachelors degree",
+        "skills": "leave it blank for now "
     };
 
-    return responses[input.toLowerCase()] || "I'm sorry, I don't understand that.";
+    // Check for direct matches first
+    if (responses[userInput]) {
+        return responses[userInput];
+    }
+
+    // Check for keywords in the input
+    const keywords = {
+        "qualification": "I'm an AI chatbot with capabilities to assist with various professional queries.",
+        "qualifications": "I can answer questions, provide information, and help with many topics.",
+        "interest": "I'm programmed to be interested in helping users like you!",
+        "about": "I'm a virtual assistant designed to help with your questions and needs.",
+        "strength": "My key strengths are reliability, speed, and knowledge on many topics.",
+        "name": "I'm ChatBot - nice to meet you!",
+        "surname": "As a bot, I don't have a last name, but you can call me ChatBot!",
+        "contact": "For contact information, please check the contact page of this website.",
+        "resume": "While I don't have a resume, I can provide information about my functions.",
+        "education": "I've been trained on vast amounts of data to assist with educational topics.",
+        "skill": "I can answer questions, explain concepts, and help find information.",
+        "cv": "I don't have a CV, but I can help you with yours if you need assistance!"
+    };
+
+    // Check for keywords in the input
+    for (const [keyword, response] of Object.entries(keywords)) {
+        if (userInput.includes(keyword)) {
+            return response;
+        }
+    }
+
+    // Default response if no matches found
+    return "I'm sorry, I don't understand that. Could you try asking differently?";
 }
     </script>
 </body>
