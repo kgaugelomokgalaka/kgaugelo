@@ -17,7 +17,7 @@
   background-position: center;
 } */
 
-.main-image::before {
+/* .main-image::before {
   background-image: url("images/get-in-touch-5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,7 +30,7 @@
   z-index: -1;
   top: 0;
   left: 0;
-}
+} */
 * {
   box-sizing: border-box;
 }

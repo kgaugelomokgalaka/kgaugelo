@@ -1,54 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="read.css">
-  
-
-
-</head>
-
-    
-
-<body  bgcolor="darkgray">
-
-
-<style>
+  <style>
     img {
       display: block;
       width: 500px;
+      border-radius: 50%;
     }
-    </style>
-    
-    <div class="topnav">
-      <a href="kgaugelo\MOKGALAKA KGAUGELO RESUME .pdf" class="download-btn">VIEW RESUME</a>
-      <a href="Get in Touch.HTML">GET IN TOUCH</a>
-      <a href="EDUCATION.HTML">EDUCATION</a>
-      <a style="color: grey;" href="ABOUT ME.HTML">ABOUT ME </a>
-      <a href="index.html">HOME</a>
+    body {
+      background-color: darkgray;
+    }
+    .topnav a {
+      margin-right: 10px;
+    }
+    .about-container {
+      color: rgb(0, 0, 0);
+      text-align: left;
+      padding: 20px;
+      font-size: large;
+      max-width: 800px;
+      margin: auto;
+    }
+    .name {
+      font-size: x-large;
+      font-weight: bold;
+    }
+    .btn-group {
+      margin-top: 20px;
+    }
+    .btn-group button a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a href="MOKGALAKA KGAUGELO RESUME .pdf" class="download-btn">VIEW RESUME</a>
+    <a href="Get in Touch.HTML">GET IN TOUCH</a>
+    <a href="CERTIFICATES.HTML">CERTIFICATES</a>
+    <a style="color: grey;" href="ABOUT ME.HTML">ABOUT ME</a>
+    <a href="index.html">HOME</a>
+  </div>
+
+  
+
+  <div class="about-container">
+    <h4 class="name">Kgaugelo Helen Mokgalaka</h4>
+    <p>
+      Hello! I'm Kgaugelo Helen Mokgalaka, a 22-year-old IT graduate from the IIE Rosebank College, Pretoria campus. I come from the small and vibrant town of Phalaborwa, located in Limpopo, South Africa.
+    </p>
+    <p>
+      I hold a qualification in <strong>Information Technology in Business Systems</strong>, and I am passionate about using technology to enhance business processes and solve real-world challenges. I aspire to become a skilled and impactful <strong>Business Analyst</strong>.
+    </p>
+    <p>
+      Through my training, I have gained strong skills in:
+    </p>
+    <ul>
+      <li>Business process analysis & documentation</li>
+      <li>Requirements gathering & data interpretation</li>
+      <li>SQL and basic database management</li>
+      <li>Microsoft Office tools (Excel, Word, PowerPoint)</li>
+      <li>Agile teamwork & communication</li>
+      <li>Web development using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>React</strong></li>
+      <li>Scripting with <strong>Python</strong></li>
+    </ul>
+    <p>
+      I am excited to bring together my technical and analytical skills to contribute to the tech industry and make a difference in the digital world.
+    </p>
+    <br>
+<br>
+<br>
+<br>
+
+
+ </style>
+</head>
+<body onload="progressBarAndCountNumber()">
+
+  <h2>COMPUTER SKILLS</h2>
+
+  <div class="skills-container">
+    <div class="parent-skill">
+      <div class="skill">
+        <div class="progress" data-progress="80">
+          <span class="progress-number">0%</span>
+        </div>
+      </div>
+      <span class="title">HTML</span>
     </div>
 
-      
+    <div class="parent-skill">
+      <div class="skill">
+        <div class="progress" data-progress="65">
+          <span class="progress-number">0%</span>
+        </div>
+      </div>
+      <span class="title">JavaScript</span>
+    </div>
 
-
-<div class="container-img">
-  <img src="images\about me pic 3.jpeg" style="border-radius: 50%;" >
-<pre style="color: rgb(0, 0, 0);text-align: left; padding: 2px;font-size: x-large;">
-  <h4 class="name">KGAUGELO HELEN MOKGALAKA</h4>
-<div class="txt">
-  <p>  Hi my name is Kgaugelo Helen Mokgalaka and am a 22 years old lady from a small <br>  town called Phalaborwa that is located in Limpopo.<br>  recently graduated from the IIE rosebank collge pretoria campus in Information Technology<br>  in Business System future Business analyst <br> </p>
-</div>
-  
-  
-  <div class="btn-group">
-    <button><a href="Read more.html">READ MORE</a></button>
-   </div>
-  </span>
+    <div class="parent-skill">
+      <div class="skill">
+        <div class="progress" data-progress="50">
+          <span class="progress-number">0%</span>
+        </div>
+      </div>
+      <span class="title">Java</span>
+    </div>
   </div>
-<footer>
-  <p>&copy;2024 kgaugelo mokgalaka.All rights reserved</p>
 
-</footer>
+  <script>
+    'use strict';
+
+    function progressBarAndCountNumber() {
+      const progressElements = document.querySelectorAll('.progress');
+      let count = 0;
+      const MAX = 100;
+
+      const interval = setInterval(() => {
+        count++;
+        progressElements.forEach(el => {
+          const target = parseInt(el.dataset.progress);
+          if (count <= target) {
+            el.parentElement.style.background = `conic-gradient(#f9004d ${count}%, #212428 0%)`;
+            el.querySelector('.progress-number').textContent = `${count}%`;
+          }
+        });
+
+        if (count === MAX) {
+          clearInterval(interval);
+        }
+      }, 20);
+    }
+  </script>
+
+
+</script>
+</body>
+</html>
+<!-- 
+    <div class="btn-group">
+      <button><a href="Read more.html">READ MORE</a></button>
+    </div> -->
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Kgaugelo Mokgalaka. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
