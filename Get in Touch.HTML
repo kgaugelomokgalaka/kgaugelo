@@ -5,7 +5,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fontawesome.com/icons/comment-dots?f=classic&s=regular">
-  <link rel="stylesheet" href="script.js">
+ <script src="script.js" defer></script>
+
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,7 @@
     }
     </style>
     <div class="topnav">
-      <a href="MOKGALAKA KGAUGELO RESUME .pdf" class="download-btn">VIEW RESUME</a>
+    <a href="./KGAUGELO MOKGALAKA RESUME.pdf" class="download-btn">VIEW RESUME</a>
       <a style="color: #808080;" href="Get in Touch.HTML">GET IN TOUCH</a>
       <a href="CERTIFICATES.HTML">CERTIFICATES</a>
       <a href="ABOUT ME.HTML">ABOUT ME </a>
@@ -45,7 +46,7 @@
     
     
     <div class="containerForm">
-      <form action="/action_page.php">
+    <form id="contact-form">
       <div class="row">
         <div class="col-25">
           <label for="fname"></label>
@@ -115,6 +116,21 @@
 
 
 
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop form from submitting normally
+
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
+    const subject = document.getElementById("subject").value;
+
+    // Here you could send data to a backend (via fetch), or just show a message:
+    alert(`Thank you, ${fname} ${lname}! Your message has been received:\n"${subject}"`);
+
+    // Optionally reset the form
+    this.reset();
+  });
+</script>
 
 
 <footer>

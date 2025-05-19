@@ -4,13 +4,55 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="read.css">
   <style>
-    img {
-      display: block;
-      width: 500px;
-      border-radius: 50%;
-    }
+   .skills-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center; /* Better centering */
+  flex-wrap: wrap;
+}
+
+  .parent-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .progress {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background:darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .progress-number {
+    font-weight: bold;
+  }
+
+  .title {
+    margin-top: 8px;
+    font-size: 25px;
+    text-align: center;
+  }
+    
     body {
-      background-color: darkgray;
+      background-color: rgba(82, 79, 79, 0.938);
     }
     .topnav a {
       margin-right: 10px;
@@ -19,12 +61,12 @@
       color: rgb(0, 0, 0);
       text-align: left;
       padding: 20px;
-      font-size: large;
+      font-size: medium;
       max-width: 800px;
       margin: auto;
     }
     .name {
-      font-size: x-large;
+      font: size 100px;;
       font-weight: bold;
     }
     .btn-group {
@@ -40,7 +82,7 @@
 <body>
 
   <div class="topnav">
-    <a href="MOKGALAKA KGAUGELO RESUME .pdf" class="download-btn">VIEW RESUME</a>
+    <a href="./KGAUGELO MOKGALAKA RESUME.pdf" class="download-btn">VIEW RESUME</a>
     <a href="Get in Touch.HTML">GET IN TOUCH</a>
     <a href="CERTIFICATES.HTML">CERTIFICATES</a>
     <a style="color: grey;" href="ABOUT ME.HTML">ABOUT ME</a>
@@ -52,51 +94,56 @@
   <div class="about-container">
     <h4 class="name">Kgaugelo Helen Mokgalaka</h4>
     <p>
+      <br> 
     Hello! I'm Kgaugelo Helen Mokgalaka, a 22-year-old IT graduate from IIE Rosebank College, Pretoria campus. I proudly come from the small but vibrant town of Phalaborwa in Limpopo, South Africa.
 
 I hold a qualification in Information Technology in Business Systems, and I’m passionate about leveraging technology to improve business processes and address real-world challenges. My career ambition is to grow into a skilled and impactful Data Analyst, where I can turn data into meaningful insights that drive informed decision-making.
 
 Currently, I’m gaining valuable experience as a COBOL Mainframe Developer Intern through a program offered by ABSA in collaboration with CAPACITI. This opportunity has allowed me to strengthen my technical foundation, particularly in legacy systems that still power many critical industries today.
 
-Outside of work, I enjoy [optional: mention hobbies, personal interests, or volunteer work if relevant and you'd like to humanize the profile a bit more].
+Outside of work, I enjoy [optional: mention hobbies, personal interests, or volunteer work if relevant and you'd like to humanize the profile a bit more.
+<br>
+<br>
 <br>
 <br>
 
 
- </style>
+
 </head>
 <body onload="progressBarAndCountNumber()">
 
   <h2>COMPUTER SKILLS</h2>
 
+  <br>
+
   <div class="skills-container">
-    <div class="parent-skill">
-      <div class="skill">
-        <div class="progress" data-progress="80">
-          <span class="progress-number">0%</span>
-        </div>
+  <div class="parent-skill">
+    <div class="skill">
+      <div class="progress" data-progress="80">
+        <span class="progress-number">0%</span>
       </div>
-      <span class="title">HTML</span>
     </div>
-
-    <div class="parent-skill">
-      <div class="skill">
-        <div class="progress" data-progress="65">
-          <span class="progress-number">0%</span>
-        </div>
-      </div>
-      <span class="title">JavaScript</span>
-    </div>
-
-    <div class="parent-skill">
-      <div class="skill">
-        <div class="progress" data-progress="50">
-          <span class="progress-number">0%</span>
-        </div>
-      </div>
-      <span class="title">Java</span>
-    </div>
+    <span class="title">HTML & CSS </span>
   </div>
+
+  <div class="parent-skill">
+    <div class="skill">
+      <div class="progress" data-progress="70">
+        <span class="progress-number">0%</span>
+      </div>
+    </div>
+    <span class="title"> Java & JavaScript</span>
+  </div>
+
+  <div class="parent-skill">
+    <div class="skill">
+      <div class="progress" data-progress="60">
+        <span class="progress-number">0%</span>
+      </div>
+    </div>
+    <span class="title">react </span>
+  </div>
+</div>
 
   <script>
     'use strict';
