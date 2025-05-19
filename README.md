@@ -1,4 +1,7 @@
 EXPLORE MY WORK 
+
+deployment link ( https://kgaugelo.onrender.com)
+
 # Description
 Personal Portfolio: My portfolio gives a clear background of my education path in the Information technology
 it also gives a background of the skills i have acqured in both tecnical and soft skills
