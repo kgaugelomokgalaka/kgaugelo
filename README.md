@@ -1,5 +1,5 @@
 # EXPORE MY WORK 
-link to my portfolio (https://kgaugelo.onrender.com)
+link to my portfolio  (https://kgaugelo.onrender.com)
 
 
 #DESCRIPTION 
