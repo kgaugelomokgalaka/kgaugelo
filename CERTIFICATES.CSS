@@ -5,8 +5,13 @@
   max-width: 50%;
   margin: 0 auto;
 }
+topnav a:hover {
+    background-color: #ddd;
+    color: white;
+    text-decoration-color:  rgb(255, 14, 243);
+    color:rgb(255, 14, 243);
 
-
+}
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';

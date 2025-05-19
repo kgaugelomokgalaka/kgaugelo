@@ -65,7 +65,7 @@ body {
 
 
 .topnav a:hover {
-  background-color:  white;
+  background-color: gray;
 }
 .navbar{
   display: flex;

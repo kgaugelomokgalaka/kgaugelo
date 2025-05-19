@@ -154,6 +154,8 @@ input[type=submit]:hover {
   .topnav a:hover {
     background-color: #ddd;
     color: white;
+    text-decoration-color:  rgb(255, 14, 243);
+    color:rgb(255, 14, 243);
   }
   
   .topnav a.active {
@@ -214,6 +216,7 @@ font-size: xx-large;
    }
    .h2{
     margin-bottom: 60%;
+    text-decoration-color: rgb(255, 14, 243);
    }
    .icons {
     padding: 20px;
