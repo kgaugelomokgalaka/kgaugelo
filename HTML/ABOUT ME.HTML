@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/read.css">
+  <style>
+   .skills-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center; /* Better centering */
+  flex-wrap: wrap;
+}
+
+  .parent-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .progress {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background:darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .progress-number {
+    font-weight: bold;
+  }
+
+  .title {
+    margin-top: 8px;
+    font-size: 25px;
+    text-align: center;
+  }
+    
+    body {
+      background-color: rgb(82, 81, 81);
+    }
+    .topnav a {
+      margin-right: 10px;
+    }
+    .about-container {
+      color: rgb(0, 0, 0);
+      text-align: left;
+      padding: 20px;
+      font-size: medium;
+      max-width: 800px;
+      margin: auto;
+    }
+    .name {
+      font: size 100px;;
+      font-weight: bold;
+    }
+    .btn-group {
+      margin-top: 20px;
+    }
+    .btn-group button a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a href="../pictures/images/KGAUGELO MOKGALAKA RESUME.pdf" class="download-btn">VIEW RESUME</a>
+    <a href="Get in Touch.HTML">GET IN TOUCH</a>
+    <a href="CERTIFICATES.HTML">CERTIFICATES</a>
+    <a style="color: white;" href="ABOUT ME.HTML">ABOUT ME</a>
+    <a href="index.html">HOME</a>
+  </div>
+
+  
+
+  <div class="about-container">
+    <h4 class="name">Kgaugelo Helen Mokgalaka</h4>
+    <p>
+      <br> 
+    Hello! I'm Kgaugelo Helen Mokgalaka, a 22-year-old IT graduate from IIE Rosebank College, Pretoria campus. I proudly come from the small yet vibrant town of Phalaborwa in Limpopo, South Africa.
+
+I hold a qualification in Information Technology in Business Systems, and I’m passionate about leveraging technology to improve business processes and address real-world challenges. My career ambition is to grow into a skilled and impactful Data Analyst, where I can turn data into meaningful insights that drive informed decision-making.
+
+Currently, I’m gaining valuable experience as a COBOL Mainframe Developer Intern through a program offered by ABSA in collaboration with CAPACITI. This opportunity has allowed me to strengthen my technical foundation, particularly in legacy systems that still power many critical industries today.
+
+Outside of work, I enjoy going out with friends for movies or game nights 
+<br>
+<br>
+<br>
+<br>
+
+
+
+</head>
+<body onload="progressBarAndCountNumber()">
+
+  <h2>COMPUTER SKILLS</h2>
+
+  <br>
+
+  <div class="skills-container">
+  <div class="parent-skill">
+    <div class="skill">
+      <div class="progress" data-progress="80">
+        <span class="progress-number">0%</span>
+      </div>
+    </div>
+    <span class="title">HTML & CSS </span>
+  </div>
+
+  <div class="parent-skill">
+    <div class="skill">
+      <div class="progress" data-progress="70">
+        <span class="progress-number">0%</span>
+      </div>
+    </div>
+    <span class="title"> Java & JavaScript</span>
+  </div>
+
+  <div class="parent-skill">
+    <div class="skill">
+      <div class="progress" data-progress="60">
+        <span class="progress-number">0%</span>
+      </div>
+    </div>
+    <span class="title">react </span>
+  </div>
+</div>
+
+  <script>
+    'use strict';
+
+    function progressBarAndCountNumber() {
+      const progressElements = document.querySelectorAll('.progress');
+      let count = 0;
+      const MAX = 100;
+
+      const interval = setInterval(() => {
+        count++;
+        progressElements.forEach(el => {
+          const target = parseInt(el.dataset.progress);
+          if (count <= target) {
+            el.parentElement.style.background = `conic-gradient(#f9004d ${count}%, #212428 0%)`;
+            el.querySelector('.progress-number').textContent = `${count}%`;
+          }
+        });
+
+        if (count === MAX) {
+          clearInterval(interval);
+        }
+      }, 20);
+    }
+  </script>
+
+
+</script>
+</body>
+</html>
+<!-- 
+    <div class="btn-group">
+      <button><a href="Read more.html">READ MORE</a></button>
+    </div> -->
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Kgaugelo Mokgalaka. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

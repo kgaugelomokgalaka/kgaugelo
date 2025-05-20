@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="Chatstyle.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">ChatBot</div>
+        <div class="chat-box" id="chat-box">
+            <!-- Messages will be added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js">
+        function sendMessage() {
+    const userInput = document.getElementById("user-input").value.trim();
+    if (!userInput) return; // Don't send empty messages
+
+    addMessage("user", userInput);
+
+    // Simple bot response logic (can be expanded)
+    const botResponse = getBotResponse(userInput);
+    addMessage("bot", botResponse);
+
+    // Clear input
+    document.getElementById("user-input").value = "";
+}
+
+function addMessage(sender, message) {
+    const chatBox = document.getElementById("chat-box");
+
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("chat-message", sender === "user" ? "user-message" : "bot-message");
+    messageElement.innerText = message;
+
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to the latest message
+}
+
+function getBotResponse(input) {
+    const userInput = input.toLowerCase().trim(); // Normalize input
+    
+    // Keyword-Response Mapping (checks if input CONTAINS these keywords)
+    const keywordResponses = [
+        // Greetings
+        { keywords: ["hi", "hello", "hey"], response: "Hello! How can I assist you today?" },
+        { keywords: ["how are you", "how's it going"], response: "I am good, thanks! How are you?" },
+        { keywords: ["bye", "goodbye", "see you"], response: "Goodbye! Have a great day!" },
+        
+        // Personal Info
+        { keywords: ["your name", "who are you"], response: "I'm Kgaugelo Helen Mokgalaka's chatbot assistant!" },
+        { keywords: ["name", "first name"], response: "Kgaugelo Helen" },
+        { keywords: ["surname", "last name"], response: "Mokgalaka" },
+        
+        // Qualifications & Education
+        { keywords: ["qualification", "degree", "studied", "qualifications"], 
+          response: "Bachelor of Information Technology in Business Systems." },
+        { keywords: ["education", "school", "college", "university"], 
+          response: "I graduated from IIE Rosebank College with a Bachelor's in IT Business Systems. Before that, I attended All Saints College in Phalaborwa." },
+        
+        // About Me
+        { keywords: ["about you", "about me", "tell me about yourself", "background"], 
+          response: "I'm a 22-year-old from Phalaborwa, Limpopo. I recently graduated in IT Business Systems and aim to become a Business Analyst." },
+        
+        // Contact & Resume
+        { keywords: ["contact", "email", "phone", "reach you"], 
+          response: "You can find my contact details on the 'Get in Touch' page." },
+        { keywords: ["resume", "cv", "curriculum vitae"], 
+          response: "Click the 'View Resume' button to see my full resume." },
+        
+        // Skills & Strengths (to be updated later)
+        { keywords: ["skills", "skill", "abilities"], response: "[My skills will be listed soon!]" },
+        { keywords: ["strengths", "strength", "strong points"], response: "[My strengths will be added later.]" },
+        { keywords: ["experience", "work history", "job"], response: "[My work experience will be updated soon.]" },
+        
+        // Career Goals
+        { keywords: ["career", "goal", "future", "analyst", "business analyst"], 
+          response: "I'm working toward becoming a Business Analyst." }
+    ];
+
+    // Check for keyword matches (priority: exact match > keyword contains)
+    for (const { keywords, response } of keywordResponses) {
+        for (const keyword of keywords) {
+            if (userInput === keyword || userInput.includes(keyword)) {
+                return response;
+            }
+        }
+    }
+
+    // Default fallback response
+    return "I’m not sure I understand. Try asking about my qualifications, education, or background!";
+}
+    </script>
+</body>
